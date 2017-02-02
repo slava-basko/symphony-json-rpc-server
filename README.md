@@ -35,7 +35,7 @@ rpc_ping:
 ```
 
 Advanced Configuration
---------------
+----------------------
 You can use server as a service. Example:
 ```php
 class DefaultController extends Controller
