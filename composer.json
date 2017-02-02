@@ -1,0 +1,23 @@
+{
+  "name": "slava-basko/symphony-json-rpc-server",
+  "description": "Simple JsonRpc server for symfony",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Slava Basko",
+      "email": "basko.slava@gmail.com"
+    }
+  ],
+  "keywords": [
+    "symfony",
+    "json-rpc"
+  ],
+  "require": {
+    "php": ">=5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "JsonRpcServerBundle\\": ""
+    }
+  }
+}
