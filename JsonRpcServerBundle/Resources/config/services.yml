@@ -1,0 +1,8 @@
+services:
+    rpc_server:
+        class: Zend\Json\Server\Server
+
+    rpc_ping:
+        class: JsonRpcServerBundle\Service\Rpc\PingService
+        tags:
+            - { name: rpc.service }
