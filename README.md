@@ -33,3 +33,27 @@ rpc_ping:
     tags:
         - { name: rpc.service }
 ```
+
+Advanced Configuration
+--------------
+You can use server as a service. Example:
+```php
+class DefaultController extends Controller
+{
+    /**
+     * @Route("/", name="homepage")
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function indexAction(Request $request)
+    {
+        // Some Logic. Auth, pre-actions, etc.
+    
+        $rpcServer = $this->get('rpc_server');
+        if ($request->isMethod('get')) {
+            return new JsonResponse($rpcServer->getServiceMap()->toArray());
+        }
+        return new JsonResponse($rpcServer->handle()->toJson(), 200, [], true);
+    }
+}
+```
